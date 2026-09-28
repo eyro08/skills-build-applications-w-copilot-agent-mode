@@ -1,0 +1,206 @@
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.app-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.app-header h1,
+.section-heading h2 {
+  margin: 0;
+}
+
+.api-badge {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--badge-text);
+  background: var(--badge-bg);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.app-nav {
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.app-nav .nav-link {
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.app-nav .nav-link.active,
+.app-nav .nav-link:hover {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.data-panel {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.status-text {
+  margin: 0;
+  color: var(--muted);
+}
+
+.data-table {
+  margin: 0;
+}
+
+.data-table th {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.data-table td span,
+.leaderboard-list span,
+.workout-row span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.metric-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.metric-card h3 {
+  margin: 4px 0 14px;
+  font-size: 1.2rem;
+}
+
+.metric-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.metric-card div,
+.leaderboard-list li,
+.workout-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.metric-card dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.metric-card dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.leaderboard-list,
+.workout-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.leaderboard-list {
+  list-style: none;
+}
+
+.leaderboard-list li,
+.workout-row {
+  grid-template-columns: auto minmax(180px, 1fr) auto auto;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.workout-row {
+  grid-template-columns: minmax(180px, 1.3fr) auto auto minmax(220px, 1fr);
+}
+
+.rank {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 16px;
+  }
+
+  .app-header,
+  .leaderboard-list li,
+  .workout-row {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+  }
+
+  .app-nav .nav-link {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+  }
+}

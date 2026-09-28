@@ -1,0 +1,57 @@
+:root {
+  --text: #243331;
+  --muted: #687977;
+  --text-h: #142522;
+  --bg: #f4f7f2;
+  --panel: #ffffff;
+  --surface: #f9fbf7;
+  --border: #dce6dd;
+  --accent: #157f72;
+  --badge-bg: #fff0dd;
+  --badge-text: #8b4a11;
+  --shadow: rgba(25, 62, 56, 0.08) 0 14px 30px;
+
+  --sans: Avenir Next, Aptos, Verdana, sans-serif;
+  --heading: Georgia, Cambria, serif;
+
+  font: 16px/1.5 var(--sans);
+  letter-spacing: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
